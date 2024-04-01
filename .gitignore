@@ -1,1 +1,12 @@
 .idea/
+testProofs.py
+test.py
+test-gas.js
+test-performance.py
+setup.py
+utils
+pymerkletools
+generated
+contracts
+README.md
+gitignore
