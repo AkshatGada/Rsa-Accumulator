@@ -8,7 +8,10 @@ import random
 
 # https://github.com/Tierion/pymerkletools
 import merkletools
+import sys
 
+# Set a higher limit for integer string conversion
+sys.set_int_max_str_digits(100000) 
 # add (for all new utxos in block)
 merkle_add_timing = []
 acc_batch_add_genesis_timing = []

@@ -13,11 +13,18 @@ def to_padded_num_str(num, length_in_bytes):
 
 n, A0, S = setup()
 
+print("n",n)
+print("A0",A0)
+print("S",S)
+
 
 x = secrets.randbelow(pow(2, 256))
+print("x",x)
 A1 = add(A0, S, x, n)
+print("A1",A1)
 nonce = S[x]
 proof = prove_membership(A0, S, x, n)
+print("proof",proof)
 prime, nonce = hash_to_prime(x=x, nonce=nonce)
 
 print(to_padded_num_str(n, 384) + ',' + to_padded_num_str(proof, 384) + ',' + to_padded_num_str(prime, 32) + ',' + to_padded_num_str(A1, 384))
