@@ -35,7 +35,8 @@ def batch_add(A_pre_add, S, x_list, n):
             S[x] = nonce
             product *= hash_prime
     A_post_add = pow(A_pre_add, product, n)
-    return A_post_add, prove_exponentiation(A_pre_add, product, A_post_add, n)
+    return A_post_add 
+# , prove_exponentiation(A_pre_add, product, A_post_add, n)
 
 
 def prove_membership(A0, S, x, n):
@@ -264,3 +265,5 @@ def aggregate_membership_witnesses(A, witnesses_list, x_list, nonces_list, n):
         product *= primes[i]
 
     return agg_wit, prove_exponentiation(agg_wit, product, A, n)
+
+#imp
